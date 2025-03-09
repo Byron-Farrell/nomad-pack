@@ -10,7 +10,7 @@ const BASE_CSS = 'container mx-auto';
 
 export default function Container({
     children,
-    className,
+    className = '',
     ...rest
 }: ContainerProps) {
 
