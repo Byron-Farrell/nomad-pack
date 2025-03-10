@@ -1,24 +1,31 @@
+"use client"
+
 import Container from "@/components/ui/Container";
 import Heading from "@/components/ui/Heading";
+import ColorThemeToggle from "@/components/ui/ColorThemeToggle";
+
 
 export default function Navbar() {
     return (
-        <nav className=" text-contrast bg-foreground rounded-t ring-[1px] shadow-sm ring-slate-950/1">
-            <section className="flex items-center justify-between">
-                <section className="border-r border-gray-950/10 py-4 px-10">
-                    <Heading level={5} noMargin={true} className="">Nomad pack</Heading>
+        <nav className="p-3 text-emerald-500 dark:text-amber-500 bg-foreground rounded-t ring-[1px] shadow-sm ring-slate-950/1">
+            <Container className="flex items-center justify-center">
+
+                <div className="flex items-center gap-10 basis-1/3">
+                    <div>Explore</div>
+                    <div>Build</div>
+                    <div>Login</div>
+                </div>
+
+                <section className="flex justify-center items-center basis-1/3">
+                    <Heading level={3} noMargin={true} className="">Nomad pack</Heading>
                 </section>
 
-
-                <div className="absolute w-full flex justify-center items-center grow gap-2">
-
-                    <div className="text-base g-slate-200 text-center rounded px-4 py-1 ">Explore</div>
-                    <div className=" g-slate-200  text-center rounded px-4 py-1 ">Build</div>
-                    <div className=" g-slate-200  text-center rounded px-4 py-1 ">Login</div>
+                <div className="flex flex-row-reverse items-center  basis-1/3">
+                    <ColorThemeToggle></ColorThemeToggle>
                 </div>
 
 
-            </section>
+            </Container>
         </nav>
     )
 };

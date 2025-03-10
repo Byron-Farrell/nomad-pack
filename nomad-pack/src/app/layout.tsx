@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto_Condensed } from "next/font/google";
+import { ThemeProvider} from "next-themes";
+import { Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 
@@ -21,14 +22,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
     <body
         className={`${robotoCondensed.variable} antialiased bg-primary`}
     >
-      <div>
+      <ThemeProvider>
         <Navbar/>
         {children}
-      </div>
+      </ThemeProvider>
     </body>
     </html>
   );
