@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
     <body
-        className={`${robotoCondensed.variable} antialiased bg-primary`}
+        className={`${robotoCondensed.variable} antialiased bg-gradient-to-r from-stone-900 to-gray-700`}
     >
       <ThemeProvider>
         <Navbar/>

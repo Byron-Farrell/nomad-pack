@@ -7,7 +7,7 @@
 }
 
 [data-theme='dark'] {
-  --background: oklch(0.273 0 89.876);
+  --background: oklch(0.196 0 89.876);
   --foreground: oklch(0.196 0 89.876);
   --contrast: oklch(0.92 0.02 200);
 

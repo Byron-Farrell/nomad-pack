@@ -11,7 +11,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     icon?: ElementType;
 }
 
-const BASE__CLASSES = 'rounded';
+const BASE__CLASSES = 'rounded text-center';
 
 const BUTTON_SIZE_CLASSES: Record<ButtonSize, string> = {
     sm: 'px-3 py-1 text-sm',
@@ -20,9 +20,9 @@ const BUTTON_SIZE_CLASSES: Record<ButtonSize, string> = {
 }
 
 const BUTTON_VARIANT_CLASSES: Record<ButtonVariant, string> = {
-    primary: 'bg-emerald-500 hover:bg-emerald-600',
+    primary: 'bg-neutral-100',
     secondary: 'bg-amber-500',
-    accent: 'bg-accent',
+    accent: 'bg-linear-to-r from-red-500 to-amber-500 hover:from-amber-400 hover:to-yellow-400',
 }
 
 
@@ -45,9 +45,9 @@ export default function Button({
             )}
             {...rest}
         >
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 text-center">
                 {Icon && <Icon className="size-4" />}
-                {children && <span>{children}</span>}
+                {children && <span className="text-center w-full">{children}</span>}
             </div>
 
         </button>
