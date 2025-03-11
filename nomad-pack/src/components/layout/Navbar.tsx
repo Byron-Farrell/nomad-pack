@@ -10,7 +10,7 @@ export default function Navbar() {
         <nav className="fixed z-50 w-full p-3 bg-foreground rounded-t ring-[1px] shadow-sm ring-slate-950/1">
             <Container className="flex">
                 <section className="flex items-center basis-1/3">
-                    <Heading level={3} noMargin={true} className="">Nomad pack</Heading>
+                    <Heading level={3} noMargin={true} className="">Nomad Pack</Heading>
                 </section>
 
                 <div className="flex items-center justify-center gap-10 basis-1/3">

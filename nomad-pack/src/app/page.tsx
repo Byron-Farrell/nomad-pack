@@ -8,9 +8,9 @@ import { WrenchIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   return (
-      <Container className="pt-20">
-          <div className="flex flex-col gap-5 h-screen">
-              <Card className="flex items-center text-white justify-center bg-gradient-to-r from-stone-900 to-gray-700">
+      <div>
+          <div className=" flex flex-col gap-5 h-screen mb-20">
+              <Card className="flex h-screen items-center text-white justify-center bg-gradient-to-r from-stone-900 to-gray-700">
 
                   <section className="grow md:basis-3/5 lg:basis-1/2 gap-10 py-20 px-10 md:px-10">
                       <Heading level={1}>Your Pack. Your Rules.</Heading>
@@ -25,9 +25,9 @@ export default function Home() {
                   </section>
               </Card>
           </div>
-
+    <Container className="">
           <Heading level={2}>Gear Up for Anything.</Heading>
-          <div className="flex gap-20">
+          <div className=" flex gap-20">
               <Card
                   className="basis-1/3 bg-gradient-to-r text-white from-red-800 to-red-500 p-10 duration-200 hover:rotate-1 hover:scale-105 hover:shadow-lg transition-transform transition-all hover:brightness-110">
                   <Heading level={3}>First Aid</Heading>
@@ -182,5 +182,6 @@ export default function Home() {
           </div>
 
       </Container>
+</div>
   );
 }
