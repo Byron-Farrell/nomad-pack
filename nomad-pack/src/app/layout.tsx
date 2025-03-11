@@ -6,7 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 
 
 const robotoCondensed = Roboto_Condensed({
-  variable: "--font-geist-sans",
+  variable: "--font-roboto-condensed",
   subsets: ["latin"],
 });
 

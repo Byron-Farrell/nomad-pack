@@ -7,7 +7,7 @@ import ColorThemeToggle from "@/components/ui/ColorThemeToggle";
 
 export default function Navbar() {
     return (
-        <nav className="fixed z-50 w-full p-3 bg-foreground rounded-t ring-[1px] shadow-sm ring-slate-950/1">
+        <nav className="fixed z-50 w-full p-3 bg-foreground ring-[1px] shadow-sm ring-slate-950/1">
             <Container className="flex">
                 <section className="flex items-center basis-1/3">
                     <Heading level={3} noMargin={true} className="">Nomad Pack</Heading>

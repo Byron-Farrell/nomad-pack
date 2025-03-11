@@ -3,19 +3,27 @@ import clsx from "clsx";
 
 export interface CardProps extends React.HTMLProps<HTMLDivElement> {
     children?: React.ReactNode;
+    shadow?: boolean;
 }
 
-const BASE_CLASSES = 'bg-foreground  p-6 ring-[1px] shadow-xl ring-slate-950/10';
+const BASE_CLASSES = 'bg-foreground p-6';
+const SHADOW_CLASSES = 'ring-[1px] shadow-xl ring-slate-950/10';
 
 export default function Card({
     children,
-    className
+    className,
+    shadow = true,
+    ...props
 } : CardProps): React.ReactElement {
     return (
-        <div className={clsx(
-            BASE_CLASSES,
-            className
-        )}>
+        <div
+            {...props}
+            className={clsx(
+                BASE_CLASSES,
+                className,
+                shadow && SHADOW_CLASSES
+            )}
+        >
             {children}
         </div>
     )
