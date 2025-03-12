@@ -11,7 +11,7 @@ export default function Carousel({
     ref
 }: CarouselProps) {
     return (
-        <div ref={ref} className="overflow-x-hidden md:touch-none touch-auto" >
+        <div ref={ref} className="overflow-x-hidden md:touch-none touch-x-auto" >
             <div className="flex gap-10">
                 {components.map((item, i) => (
                     <div className="shrink-0" key={i}>{item}</div>
