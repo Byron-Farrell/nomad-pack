@@ -9,9 +9,9 @@ export interface SectionProps extends React.HTMLProps<HTMLElement> {
 }
 
 const SPACING_CLASSES: Record<Spacing, string> = {
-    sm: 'mt-2',
-    md: 'mt-5',
-    lg: 'mt-10',
+    sm: 'mt-4',
+    md: 'mt-10',
+    lg: 'mt-20',
     none: '',
 }
 

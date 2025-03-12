@@ -1,9 +1,8 @@
-import Heading from "@/components/ui/Heading";
-import Button from "@/components/ui/Button";
-import {WrenchIcon} from "@heroicons/react/24/solid";
+import Heading from "@/components/ui/base/Heading";
+import Button from "@/components/ui/base/Button";
 import Image from "next/image";
-import Section from "@/components/ui/Section";
-import Paragraph from "@/components/ui/Paragraph";
+import Section from "@/components/ui/base/Section";
+import Paragraph from "@/components/ui/base/Paragraph";
 
 export default function Hero() {
     return (
@@ -14,7 +13,7 @@ export default function Hero() {
                     Whether you’re exploring the wilderness or preparing for the unexpected, Nomad Pack lets you
                     customize every essential to fit your journey. No excess. No compromises. Just the right tools
                     for you.</Paragraph>
-                <Button icon={WrenchIcon} variant="accent" className="w-1/2" size="lg">Build A Kit</Button>
+                <Button variant="accent" className="w-1/2" size="lg">Build A Kit</Button>
             </Section>
             <Section className="hidden md:block basis-0 md:basis-2/5 lg:basis-1/2">
                 <Image src="/hero.png" alt="kit" width="1000" height="1000"/>

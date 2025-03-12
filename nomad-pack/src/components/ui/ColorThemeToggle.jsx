@@ -17,9 +17,9 @@ export default function ColorThemeToggle() {
     return (
         <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
             {theme === "dark" ? (
-                <SunIcon className="text-contrast size-5" />
+                <SunIcon className="text-contrast-foreground size-5" />
             ) : (
-                <MoonIcon className="text-contrast size-5" />
+                <MoonIcon className="text-contrast-foreground size-5" />
             )}
         </button>
     );

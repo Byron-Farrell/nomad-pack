@@ -1,8 +1,8 @@
 import React from 'react';
-import Card, { CardProps } from '@/components/ui/Card';
-import Heading from "@/components/ui/Heading";
+import Card, { CardProps } from '@/components/ui/base/Card';
+import Heading from "@/components/ui/base/Heading";
 import clsx from "clsx";
-import Section from "@/components/ui/Section";
+import Section from "@/components/ui/base/Section";
 
 type CategoryCardColors = 'red' | 'dark' | 'green' | 'default';
 type RotationDirection = 'right' | 'left';

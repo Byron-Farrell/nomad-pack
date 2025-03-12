@@ -6,7 +6,7 @@ export interface ContainerProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
 }
 
-const BASE_CSS = 'container mx-auto';
+const BASE_CSS = 'container md:px-0 mx-auto px-4';
 
 export default function Container({
     children,

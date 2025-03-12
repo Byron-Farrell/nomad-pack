@@ -21,21 +21,21 @@ const HeadingTagRecords: Record<HeadingLevel, HeadingTag> = {
 };
 
 const HEADING_CLASSES: Record<HeadingLevel, string> = {
-    1: "text-4xl font-bold",
-    2: "text-3xl font-bold",
-    3: "text-2xl font-bold",
-    4: "text-xl font-bold",
-    5: "text-lg font-bold",
-    6: "text-base font-bold"
+    1: "text-6xl font-bold",
+    2: "text-5xl font-bold",
+    3: "text-3xl font-bold",
+    4: "text-xl",
+    5: "text-lg",
+    6: "text-base opacity-90",
 };
 
 const SPACING_CLASSES: Record<HeadingLevel, string> = {
-    1: "mb-6",
-    2: "mb-5",
-    3: "mb-4",
-    4: "mb-3",
-    5: "mb-2",
-    6: "mb-1"
+    1: "mb-12",
+    2: "mb-10",
+    3: "mb-8",
+    4: "mb-6",
+    5: "mb-4",
+    6: "mb-2"
 };
 
 
