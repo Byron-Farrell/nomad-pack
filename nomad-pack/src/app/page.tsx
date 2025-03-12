@@ -3,6 +3,7 @@ import Heading from "@/components/ui/base/Heading";
 import Hero from '@/app/home/components/Hero';
 import Section from "@/components/ui/base/Section";
 import ProductShowcase from "@/app/home/components/ProductShowcase";
+import PremadePacks from "@/app/home/components/PremadePacks";
 
 
 export default function Home() {
@@ -18,6 +19,9 @@ export default function Home() {
                     </Section>
                 </Section>
 
+                <Section spacing="lg">
+                    <PremadePacks/>
+                </Section>
 
             </Container>
         </div>

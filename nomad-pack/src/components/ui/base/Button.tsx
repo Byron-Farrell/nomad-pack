@@ -1,6 +1,6 @@
 "use client"
 
-import {ComponentProps, ElementType, ReactNode} from "react";
+import {ComponentProps, ReactNode} from "react";
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
@@ -25,7 +25,7 @@ const BUTTON_SIZE_CLASSES: Record<ButtonSize, string> = {
 const BUTTON_VARIANT_CLASSES: Record<ButtonVariant, string> = {
     primary: 'bg-neutral-900 text-white',
     secondary: 'bg-neutral-200 text-black',
-    accent: 'bg-linear-to-r from-red-500 to-amber-500',
+    accent: 'bg-linear-to-r from-red-500 to-amber-500  text-white',
     outlined: 'bg-transparent border border-neutral-900',
 }
 

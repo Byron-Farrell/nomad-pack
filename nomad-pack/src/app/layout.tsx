@@ -3,6 +3,7 @@ import { ThemeProvider} from "next-themes";
 import { Roboto_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 
 const robotoCondensed = Roboto_Condensed({
@@ -29,6 +30,7 @@ export default function RootLayout({
       <ThemeProvider>
         <Navbar/>
         {children}
+        <Footer/>
       </ThemeProvider>
     </body>
     </html>
