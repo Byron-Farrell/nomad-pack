@@ -9,7 +9,10 @@ export interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
     noMargin?: boolean;
     children?: React.ReactNode;
     className?: string;
+    foreground?: boolean;
 }
+
+const BASE_CLASSES = '';
 
 const HeadingTagRecords: Record<HeadingLevel, HeadingTag> = {
     1: "h1",
@@ -21,29 +24,29 @@ const HeadingTagRecords: Record<HeadingLevel, HeadingTag> = {
 };
 
 const HEADING_CLASSES: Record<HeadingLevel, string> = {
-    1: "text-6xl font-bold",
-    2: "text-5xl font-bold",
-    3: "text-3xl font-bold",
+    1: "text-4xl font-bold",
+    2: "text-3xl font-bold",
+    3: "text-2xl",
     4: "text-xl",
     5: "text-lg",
     6: "text-base opacity-90",
 };
 
 const SPACING_CLASSES: Record<HeadingLevel, string> = {
-    1: "mb-12",
-    2: "mb-10",
-    3: "mb-8",
-    4: "mb-6",
+    1: "mb-6",
+    2: "mb-6",
+    3: "mb-6",
+    4: "mb-4",
     5: "mb-4",
     6: "mb-2"
 };
-
 
 export default function Heading({
     level,
     children,
     className,
     noMargin = false,
+    foreground = false,
     ...props
 }: HeadingProps) {
 
@@ -54,6 +57,8 @@ export default function Heading({
                 role="heading"
                 aria-level={level}
                 className={clsx(
+                    BASE_CLASSES,
+                    foreground ? 'text-contrast-foreground' : 'text-contrast',
                     HEADING_CLASSES[level],
                     noMargin ? noMargin : SPACING_CLASSES[level],
                     className)}

@@ -3,8 +3,7 @@ import Heading from "@/components/ui/base/Heading";
 import Hero from '@/app/home/components/Hero';
 import Section from "@/components/ui/base/Section";
 import ProductShowcase from "@/app/home/components/ProductShowcase";
-import PremadePacks from "@/app/home/components/PremadePacks";
-
+import GuideShowcase from "@/app/home/components/GuideShowcase";
 
 export default function Home() {
     return (
@@ -12,15 +11,15 @@ export default function Home() {
             <Hero/>
             <Container className="">
 
-                <Section spacing="lg" className="mb-40">
-                    <Heading level={2}>Explore</Heading>
+                <Section spacing="lg">
+                    <Heading level={2}>Best Sellers</Heading>
                     <Section>
                         <ProductShowcase/>
                     </Section>
                 </Section>
 
                 <Section spacing="lg">
-                    <PremadePacks/>
+                    <GuideShowcase/>
                 </Section>
 
             </Container>

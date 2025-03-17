@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useState } from "react";
-import Button from "@/components/ui/base/Button";
+import Button from "@/components/ui/Button";
 import Section from "@/components/ui/base/Section";
 import {AnimatePresence, motion} from 'framer-motion';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import Card, { CardProps } from '@/components/ui/base/Card';
+import Card, { CardProps } from '@/components/ui/Card';
 import Heading from "@/components/ui/base/Heading";
 import clsx from "clsx";
 import Section from "@/components/ui/base/Section";

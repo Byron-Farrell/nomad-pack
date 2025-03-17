@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import Button from "@/components/ui/base/Button";
+import Button from "@/components/ui/Button";
 
 export interface TabProps {
     tabs: string[];
@@ -21,8 +21,10 @@ export default function Tabs({
             <div className="flex gap-5">
                 {tabs.map((tab, index) => (
                     <Button
+                        noDarkMode
                         role="tab"
                         key={tab}
+                        animationType="none"
                         variant={selectedIndex === index ? 'primary' : 'secondary'}
                         onClick={() => onSelected(index)}
                         aria-selected={selectedIndex === index}

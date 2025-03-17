@@ -2,8 +2,8 @@
 
 import { ReactNode, useEffect, useRef, useState } from 'react';
 import Section from "@/components/ui/base/Section";
-import CarouselNavigation from '@/components/ui/base/carousel/CarouselNavigation'
-import CarouselContent from '@/components/ui/base/carousel/CarouselContent'
+import CarouselNavigation from '@/components/ui/carousel/CarouselNavigation'
+import CarouselContent from '@/components/ui/carousel/CarouselContent'
 
 export interface CarouselProps {
     components: ReactNode[];

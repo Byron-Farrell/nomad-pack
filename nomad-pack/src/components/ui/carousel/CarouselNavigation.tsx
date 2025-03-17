@@ -1,6 +1,6 @@
 "use client"
 
-import Button from "@/components/ui/base/Button";
+import Button from "@/components/ui/Button";
 import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/24/solid';
 
 export interface CarouselNavigationProps {

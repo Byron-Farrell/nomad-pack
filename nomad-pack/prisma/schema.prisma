@@ -1,0 +1,64 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Guide {
+  id           Int @id @default(autoincrement())
+  name         String
+  description  String
+  imageUrl     String
+  createdAt    DateTime @default(now())
+}
+
+
+
+model MarketCategory {
+  id                        Int @id @default(autoincrement())
+  name                      String
+  description               String @default("")
+  createdAt                 DateTime @default(now())
+
+  marketProductCategory     MarketProductCategory[]
+}
+
+model MarketProductCategory {
+  id                Int @id @default(autoincrement())
+  marketCategoryId  Int
+  productCategory   Int
+
+  marketCategory    MarketCategory @relation( fields: [marketCategoryId], references: [id])
+  ProductCategory   ProductCategory @relation( fields: [productCategory], references: [id])
+
+}
+
+model ProductCategory {
+  id                        Int @id @default(autoincrement())
+  name                      String
+  description               String @default("")
+  createdAt                 DateTime @default(now())
+
+  products                  Product[]
+  marketProductCategory     MarketProductCategory[]
+}
+
+model Product {
+  id            Int @id @default(autoincrement())
+  name          String
+  description   String
+  imageUrl      String
+  categoryId    Int
+  createdAt     DateTime @default(now())
+
+  category      ProductCategory @relation(fields: [categoryId], references: [id])
+}
