@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Bandage",
+    "productCategoryId": 1
+  },
+  {
+    "name": "Tourniquet",
+    "productCategoryId": 1
+  },
+  {
+    "name": "Knifes",
+    "productCategoryId": 2
+  },
+  {
+    "name": "Compass",
+    "productCategoryId": 3
+  },
+  {
+    "name": "AA",
+    "productCategoryId": 4
+  },
+  {
+    "name": "AAA",
+    "productCategoryId": 4
+  }
+]

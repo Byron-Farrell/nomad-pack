@@ -1,5 +1,5 @@
 import {NextResponse } from "next/server";
-import { getMarketCategoriesByProductCategoryId} from "@/lib/prisma/market";
+import { getProductSubCategoriesByProductCategoryId} from "@/lib/prisma/subCategory";
 
 export async function GET(
     request: Request,
@@ -15,6 +15,6 @@ export async function GET(
         );
     }
 
-    const marketCategories = await getMarketCategoriesByProductCategoryId(productCategoryId)
-    return NextResponse.json(marketCategories);
+    const productSubCategories = await getProductSubCategoriesByProductCategoryId(productCategoryId)
+    return NextResponse.json(productSubCategories);
 }

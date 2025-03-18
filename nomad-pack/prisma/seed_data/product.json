@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Premium Steel Knife",
+    "description": "A premium steel knife",
+    "imageUrl": "/tools/knife1.jpeg",
+    "categoryId": 2,
+    "price": 49.99
+  },
+  {
+    "name": "standard Steel Knife",
+    "description": "A rugged steel knife",
+    "imageUrl": "/tools/knife2.jpeg",
+    "categoryId": 2,
+    "price": 14.99
+  },
+  {
+    "name": "Premium Tungsten Knife",
+    "description": "A premium tungsten knife",
+    "imageUrl": "/tools/knife3.jpeg",
+    "categoryId": 2,
+    "price": 39.99
+  },
+  {
+    "name": "Tungsten Knife",
+    "description": "A rugged tungsten knife",
+    "imageUrl": "/tools/knife4.jpeg",
+    "categoryId": 2,
+    "price": 79.99
+  },
+  {
+    "name": "Loose Bandage Roll",
+    "description": "A roll of bandages",
+    "imageUrl": "/first-aid/bandage1.jpeg",
+    "categoryId": 1,
+    "price": 14.99
+  },
+  {
+    "name": "Mini Bandage pack",
+    "description": "A mini bandage pack",
+    "imageUrl": "/first-aid/bandage2.jpeg",
+    "categoryId": 1,
+    "price": 9.99
+  },
+  {
+    "name": "Large Bandage Roll",
+    "description": "A large bandage roll",
+    "imageUrl": "/first-aid/bandage3.jpeg",
+    "categoryId": 1,
+    "price": 19.99
+  },
+  {
+    "name": "Large Bandage Roll",
+    "description": "A mini bandage pack",
+    "imageUrl": "/first-aid/bandage4.jpeg",
+    "categoryId": 1,
+    "price": 14.99
+  },
+  {
+    "name": "Tourniquet Pack",
+    "description": "A pack tourniquets",
+    "imageUrl": "/first-aid/tourniquet1.jpeg",
+    "categoryId": 1,
+    "price": 24.99
+  },
+  {
+    "name": "Tourniquet",
+    "description": "A basic tourniquet",
+    "imageUrl": "/first-aid/tourniquet2.jpeg",
+    "categoryId": 1,
+    "price": 12.99
+  },
+  {
+    "name": "Large Tourniquet",
+    "description": "A basic large tourniquet",
+    "imageUrl": "/first-aid/tourniquet3.jpeg",
+    "categoryId": 1,
+    "price": 18.99
+  },
+  {
+    "name": "Premium Tourniquet",
+    "description": "A premium tourniquet",
+    "imageUrl": "/first-aid/tourniquet3.jpeg",
+    "categoryId": 1,
+    "price": 34.99
+  }
+]

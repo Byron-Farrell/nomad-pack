@@ -8,6 +8,8 @@ export interface DropDownContentProps {
     fadeOut?: 'smooth' | 'instant';
 }
 
+const BASE_CLASSES = 'overflow-hidden transition-[max-height] max-h-0 ease-in';
+
 export default function DropDownContent({
     children,
     className,
@@ -16,9 +18,8 @@ export default function DropDownContent({
 }: DropDownContentProps) {
     return (
         <div className={clsx(
-            "relative overflow-hidden",
-            "transition-[max-height] max-h-0 w-full  ease-in",
-            isOpen && "max-h-[200px] !duration-400",
+            BASE_CLASSES,
+            isOpen && "max-h-[200px] !duration-200",
             fadeOut === "smooth" ? "duration-400" : "duration-0",
             className,
         )}>

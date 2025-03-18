@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "productCategoryId": 1,
+    "marketCategoryId": 1
+  },
+  {
+    "id": 2,
+    "productCategoryId": 2,
+    "marketCategoryId": 1
+  },
+  {
+    "id": 3,
+    "productCategoryId": 3,
+    "marketCategoryId": 1
+  },
+  {
+    "id": 4,
+    "productCategoryId": 4,
+    "marketCategoryId": 1
+  },
+  {
+    "id": 5,
+    "productCategoryId": 4,
+    "marketCategoryId": 2
+  }
+]

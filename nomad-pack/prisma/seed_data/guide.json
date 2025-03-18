@@ -1,0 +1,17 @@
+[
+  {
+    "name": "FIRST AID",
+    "description": "WIP",
+    "imageUrl": "/guides/firstaid.jpeg"
+  },
+  {
+    "name": "ESSENTIALS",
+    "description": "WIP",
+    "imageUrl": "/guides/bag.jpeg"
+  },
+  {
+    "name": "WAYS TO PURIFY WATER",
+    "description": "WIP",
+    "imageUrl": "/guides/water.jpeg"
+  }
+]

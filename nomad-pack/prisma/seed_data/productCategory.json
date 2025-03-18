@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "First Aid",
+    "description": "First Aid"
+  },
+  {
+    "id": 2,
+    "name": "Tools & Knifes",
+    "description": "Tools & Knifes"
+  },
+  {
+    "id": 3,
+    "name": "Navigation",
+    "description": "Navigation"
+  },
+  {
+    "id": 4,
+    "name": "Batteries",
+    "description": "Batteries"
+  }
+]

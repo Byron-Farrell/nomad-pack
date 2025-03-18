@@ -16,7 +16,7 @@ export function getMarketCategoriesByProductCategoryId(id: number) {
     return prismaClient.marketCategory.findMany({
         where: {
             marketProductCategory: {
-                some: { productCategory: id }
+                some: { productCategoryId: id }
             }
         }
     });

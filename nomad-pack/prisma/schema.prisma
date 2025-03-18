@@ -33,13 +33,22 @@ model MarketCategory {
 }
 
 model MarketProductCategory {
-  id                Int @id @default(autoincrement())
-  marketCategoryId  Int
-  productCategory   Int
+  id                  Int @id @default(autoincrement())
+  marketCategoryId    Int
+  productCategoryId   Int
 
-  marketCategory    MarketCategory @relation( fields: [marketCategoryId], references: [id])
-  ProductCategory   ProductCategory @relation( fields: [productCategory], references: [id])
+  marketCategory      MarketCategory @relation( fields: [marketCategoryId], references: [id])
+  ProductCategory     ProductCategory @relation( fields: [productCategoryId], references: [id])
 
+}
+
+model ProductSubCategory {
+  id                        Int @id @default(autoincrement())
+  name                      String
+  createdAt                 DateTime @default(now())
+  productCategoryId         Int
+
+  ProductCategory           ProductCategory @relation(fields: [productCategoryId], references: [id])
 }
 
 model ProductCategory {
@@ -50,6 +59,7 @@ model ProductCategory {
 
   products                  Product[]
   marketProductCategory     MarketProductCategory[]
+  ProductSubCategory        ProductSubCategory[]
 }
 
 model Product {
@@ -58,6 +68,7 @@ model Product {
   description   String
   imageUrl      String
   categoryId    Int
+  price         Float
   createdAt     DateTime @default(now())
 
   category      ProductCategory @relation(fields: [categoryId], references: [id])

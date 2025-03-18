@@ -3,17 +3,36 @@
 import DropDownButton from "@/components/ui/DropDownButton";
 import {useState} from "react";
 import DropDownContent from "@/components/ui/DropDownContent";
-import GuideShowcase from "@/app/home/components/GuideShowcase";
-import ProductShowcase from "@/app/home/components/ProductShowcase";
-import List from "@/components/ui/base/List";
-import ListItem from "@/components/ui/base/ListItem";
+import Checkbox from "@/components/ui/Checkbox";
+import type {Product} from "@prisma/client";
+import Button from "@/components/ui/Button";
 
-const buttons = [
-    { label: "Sort By" },
-    { label: "Price Range" },
-]
 
-export default function Filter() {
+export interface FilterType {
+    name: string,
+    enabled: boolean,
+    handleFilter: (product: Product) => boolean,
+}
+
+export type FilterGroup = {
+    label: string,
+    filters: FilterType[],
+}
+
+export interface FilterProps {
+    onFilterSelected: (state: boolean, label: string) => void;
+    filterGroups: FilterGroup[];
+    onApply?: () => void;
+    onReset?: () => void;
+}
+
+
+export default function Filter({
+    onFilterSelected,
+    filterGroups = [],
+    onApply = () => undefined,
+    onReset = () => undefined
+}: FilterProps) {
     const [selected, setSelected] = useState<string>('');
     const [fadeOut, setFadeOut] = useState<'smooth' | 'instant'>('smooth');
 
@@ -28,35 +47,65 @@ export default function Filter() {
         }
     }
 
+    function handleOnReset() {
+        setSelected('');
+        setFadeOut('smooth');
+        onReset();
+    }
+
+    function handleOnApply() {
+        setSelected('');
+        setFadeOut('smooth');
+        onApply();
+    }
 
     return (
         <div>
             <div className="flex gap-4">
-                {buttons.map(({ label }, i) => (
-                    <DropDownButton
-                        size="lg"
-                        isSelected={selected === label}
-                        key={i} label={label}
-                        onSelected={handleOnSelected}
-                    />
-                ))}
+                <div className="flex gap-4 grow">
+                    {filterGroups.map((group: FilterGroup, groupKey) => (
+                        <DropDownButton
+                            size="lg"
+                            key={groupKey}
+                            isSelected={selected === group.label}
+                            label={group.label}
+                            onSelected={handleOnSelected}
+                        />
+                    ))}
+
+                </div>
             </div>
             <div>
-                {buttons.map(({ label }, i) => (
+                {filterGroups.map((group: FilterGroup, groupKey) => (
                     <DropDownContent
-                        isOpen={selected === label}
-                        key={i}
+                        key={groupKey}
+                        isOpen={selected === group.label}
                         fadeOut={fadeOut}
+                        className="flex flex-col gap-3 w-full"
                     >
-                        <List>
-                            <ListItem>Bandages</ListItem>
-                            <ListItem>Bandages</ListItem>
-                            <ListItem>Bandages</ListItem>
-                            <ListItem>Bandages</ListItem>
-                            <ListItem>Bandages</ListItem>
-                            <ListItem>Bandages</ListItem>
-                            <ListItem>Bandages</ListItem>
-                        </List>
+                        <div className="flex flex-col gap-3">
+                            {group.filters.map((filter, filterKey) => (
+                                <Checkbox
+                                    key={filterKey}
+                                    isChecked={filter.enabled}
+                                    onSelected={(state) => onFilterSelected(state, filter.name)}
+                                    size="lg"
+                                    label={filter.name}
+                                />
+                            ))}
+                        </div>
+                        <div className="flex gap-3 mb-3">
+                            <Button
+                                noDarkMode
+                                className="min-w-24"
+                                onClick={handleOnApply}
+                            >Apply</Button>
+                            <Button
+                                variant="secondary"
+                                className="min-w-24"
+                                onClick={handleOnReset}
+                            >Reset</Button>
+                        </div>
                     </DropDownContent>
                 ))}
             </div>
